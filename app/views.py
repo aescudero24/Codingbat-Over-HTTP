@@ -32,9 +32,10 @@ def cat_dog(request: HttpRequest, string: str) -> HttpResponse:
 
 def lone_sum(request: HttpRequest, a: int, b: int, c: int) -> HttpResponse:
     sum = 0
-    sum += a
-    if a != b:
+    if a != b and a != c:
+        sum += a
+    if b != a and b != c:
         sum += b
-    if a != c and b != c:
+    if c != a and c != b:
         sum += c
     return HttpResponse(sum)
