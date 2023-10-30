@@ -5,7 +5,7 @@ from django.test import SimpleTestCase
 
 class TestNearHundred(SimpleTestCase):
     def test_near_hundred_93(self):
-        response = self.client.get("/warmup1/near-hundred/190/")
+        response = self.client.get("/warmup1/near-hundred/93/")
         self.assertContains(response, "True")
 
     def test_near_hundred_90(self):
@@ -13,7 +13,7 @@ class TestNearHundred(SimpleTestCase):
         self.assertContains(response, "True")
 
     def test_near_hundred_89(self):
-        response = self.client.get("/warmup1/near-hundred/189/")
+        response = self.client.get("/warmup1/near-hundred/89/")
         self.assertContains(response, "False")
 
 
